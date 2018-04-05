@@ -9,7 +9,7 @@ var
 	bodyParser = 	require ( 'body-parser' ),
 	fs = 			require ( 'fs' ),
 	adaro =			require ( 'adaro' ),
-	flash = 		require ( 'connect-flash' ),
+	flash = 		require ( 'connect-flash' )
 const
 	i18next = 		require ( 'i18next' ),
 	i18nextMid = 	require ( 'i18next-express-middleware' ),
