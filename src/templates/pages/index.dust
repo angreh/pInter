@@ -1,0 +1,7 @@
+{>"layouts/base"/}
+
+{<body}
+
+	angreh {@get text="angreh" /}
+
+{/body}
