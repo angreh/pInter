@@ -10,8 +10,6 @@ var
 	fs = 			require ( 'fs' ),
 	adaro =			require ( 'adaro' ),
 	flash = 		require ( 'connect-flash' ),
-	passport = 		require ( 'passport' ),
-	session = 		require ( 'cookie-session' )
 const
 	i18next = 		require ( 'i18next' ),
 	i18nextMid = 	require ( 'i18next-express-middleware' ),
@@ -54,6 +52,7 @@ app.set ( 'view engine', 'dust' )
 app.set ( 'views', 'src/templates' )
 // Adaro / DustJS : end
 
+
 // Express default: start
 app.use ( favicon ( path.join ( __dirname, 'public', 'favicon.ico' ) ) )
 app.use ( logger ( 'dev' ) )
@@ -61,17 +60,6 @@ app.use ( bodyParser.json () )
 app.use ( bodyParser.urlencoded ({ extended: false }) )
 // Express defaults: end
 
-// Sessions: start
-app.use ( session ({
-	name: 'session',
-	keys: ['hmmm', 'kkkk']
-}))
-// Session: end
-
-// Passport: start
-app.use ( passport.initialize () )
-app.use ( passport.session () )
-// Passaport: end
 
 // Express defaults: start
 app.use ( cookieParser () )
